@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Abnormality Predictor</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+<div class="res">
+   <h1> Patient details</h1>
+   <h3> For patient record : {{record_no}}</h3>
+   <h3> Patient Name: {{Patient_name}}</h3>
+   <h3> Patient ID : {{patient_id}}</h3>
+   <h2> {{ prediction_text }}</h2>
+</div>
+   
+</body>
+</html>

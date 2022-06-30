@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ECG Abnormality Predictor Home</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+  {{ prediction_text }}
+ <div class="login">
+	<h1>Predict Abnormalities in ECG signal Patient Record</h1>
+     <h3> Enter the following details of the Patient</h3>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post" enctype="multipart/form-data">
+    <input type="text" name="Record No" placeholder="Record No" required="required" /> 
+    <input type="text" name="Patient's Name" placeholder="Patient's Name" required="required" /> 
+		<input type="text" name="Patent ID" placeholder="Patient ID" required="required" /> 
+    <input type="file" name="csvfile" accept=".csv"> <br>
+    <button type="submit" class="btn">Predict</button>
+       
+    </form>
+   <br>
+   
+   
+
+ </div>
+
+
+</body>
+</html>
